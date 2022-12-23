@@ -43,6 +43,9 @@ function onDataReceived(text) {
   else if(text === 'help\n'){
     help();
   }
+  else if (text === 'list\n'){
+    list();
+  }
   else{
     unknownCommand(text);
   }
@@ -102,3 +105,13 @@ function help () {
   h.forEach((e) => {
   console.log(e)})
 }
+
+let listtasks = ["task1","task2"];
+
+function list (text){
+  for (let i=0; i <listtasks.length;i++){
+console.log(`${i+1}-${listtasks[i]}`);
+
+  }
+}
+
