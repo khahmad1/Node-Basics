@@ -46,6 +46,9 @@ function onDataReceived(text) {
   else if (text === 'list\n'){
     list();
   }
+  else if (text.startsWith('add')){
+    add(text);
+  }
   else{
     unknownCommand(text);
   }
@@ -110,8 +113,18 @@ let listtasks = ["task1","task2"];
 
 function list (text){
   for (let i=0; i <listtasks.length;i++){
-console.log(`${i+1}-${listtasks[i]}`);
+console.log(`${i+1}- [ ]${listtasks[i]}`);
 
-  }
+}
 }
 
+function add(obj){
+obj=obj.trim().split(" ")[1]
+if(obj==undefined){
+  console.log("error")
+}
+else{
+  listtasks.push(obj)
+}
+
+}
