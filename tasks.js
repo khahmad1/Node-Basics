@@ -49,6 +49,9 @@ function onDataReceived(text) {
   else if (text.startsWith('add')){
     add(text);
   }
+  else if (text.startsWith('remove')){
+remove(text);
+  }
   else{
     unknownCommand(text);
   }
@@ -127,4 +130,21 @@ else{
   listtasks.push(obj)
 }
 
+}
+function remove(obj) {
+  obj = obj.replace('\n', '').trim();
+  if (obj === "remove\n") {
+    listtasks.pop();
+    return
+  }
+
+  var rem = obj.split(' ');
+  if (rem[0] === 'remove') {
+    var b = rem.slice(1).join(' ');
+    if (b > listtasks.length) {
+      console.log("You enter a number does not exist");
+    } else {
+      listtasks.splice(`${b[0] - 1}`, 1);
+    }
+  }
 }
