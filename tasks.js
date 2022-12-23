@@ -67,6 +67,10 @@ function unknownCommand(c){
  * @returns {void}
  */
 function hello(text){
+  if (text === "hello\n") {
+    console.log("hello!");
+    return
+  }
 
   text = text.replace('\n', '').trim();
   var words = text.split(' ');
