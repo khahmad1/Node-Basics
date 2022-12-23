@@ -106,7 +106,7 @@ startApp("Ahmad kharma ")
 // help command of the command 
 
 function help () {
-  let h= [`"hello"for saying hello!`,`"hello world " for saying hello world!`, "help", "exit", "quit"]
+  let h= [`"hello"for saying hello!`,`"hello world " for saying hello world!`, "help", "exit", "quit",`"add"for add anything in list  `,`"remove" for remove anything from list`]
   console.log("\nThe commands are: \n")
   h.forEach((e) => {
   console.log(e)})
