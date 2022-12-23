@@ -83,7 +83,8 @@ function quit(){
 
 // The following line starts the application
 startApp("Ahmad kharma ")
-// help command 
+
+// help command of the command 
 
 function help () {
   let h= ["hello", "help", "exit", "quit"]
